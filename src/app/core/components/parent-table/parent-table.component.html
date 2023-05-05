@@ -1,0 +1,21 @@
+<!-- <p>parent-table works!</p> -->
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container [matColumnDef]="column" *ngFor="let column of displayedColums">
+      <th mat-header-cell *matHeaderCellDef> {{column}} </th>
+      <td mat-cell *matCellDef="let element">
+        <ng-container *ngIf="column !== 'Action' ">
+          {{element[column]}}
+        </ng-container>
+        <ng-container *ngIf="column === 'action' ">
+          <mat-icon *ngFor="let icon of actions" >{{icon}}</mat-icon>
+        </ng-container>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColums"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColums;"></tr>
+  </table>
+  <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[0, 1, 25, 100]" aria-label="Select page">
+  </mat-paginator>
+6

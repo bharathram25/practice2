@@ -1,0 +1,91 @@
+
+<div class="box">
+  <form [formGroup]="employeeDetailForm" >
+  <!-- ---------Designation Id & Role Id ----------- -->
+    <div>
+      <div fxFlex="100%" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%">
+        <mat-label fxFlex="40%">Designation ID : </mat-label>
+        <mat-form-field fxFlex="60%" appearance="outline">
+          <input matInput placeholder="Placeholder" formControlName="designationId">
+          <!-- <mat-error *ngIf="employeeDetailForm?.get('designationId)?.hasError('pattern')"> this is not matching</mat-error> -->
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxFlex="50%">
+        <mat-label fxFlex="40%">Role Id :</mat-label>
+        <mat-form-field fxFlex="60%" appearance="outline">
+          <input matInput placeholder="Placeholder" formControlName="roleId">
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        </mat-form-field>
+      </div>
+      </div>
+    </div>
+    <!-- -----------First name & Last Name --------- -->
+    <div>
+      <div fxFlex="100%" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%">
+        <mat-label fxFlex="40%">First Name:</mat-label>
+        <mat-form-field fxFlex="60%" appearance="outline">
+          <input matInput placeholder="Placeholder" formControlName="firstName">
+          <!-- <mat-error *ngIf="employeeDetailForm?.get('firstName')?.hasError('pattern')"> this is not matching</mat-error> -->
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxFlex="50%">
+        <mat-label fxFlex="40%">Last Name:</mat-label>
+        <mat-form-field fxFlex="60%" appearance="outline">
+          <input matInput placeholder="Placeholder" formControlName="lastName">
+          <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        </mat-form-field>
+      </div>
+      </div>
+    </div>
+    <!-- ----------- Email & Alternate Email ----------- -->
+    <div>
+      <div fxFlex="100%" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxFlex="50%">
+          <mat-label fxFlex="40%">Email:</mat-label>
+          <mat-form-field fxFlex="60%" appearance="outline">
+            <input matInput placeholder="Placeholder" formControlName="email">
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxFlex="50%">
+          <mat-label fxFlex="40%">Alternate Email:</mat-label>
+          <mat-form-field fxFlex="60%" appearance="outline">
+            <input matInput placeholder="Placeholder" formControlName="alternateEmail">
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <!-- --------------DOB & DOJ--------------- -->
+
+    <div>
+      <div fxFlex="100%" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+        <div fxLayout="row" fxFlex="50%">
+          <mat-label fxFlex="40%">Date Of Birth:</mat-label>
+          <mat-form-field fxFlex="60%" appearance="outline">
+            <input matInput placeholder="Placeholder" formControlName="dateOfBirth">
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxFlex="50%">
+          <mat-label fxFlex="40%">Date Of Join:</mat-label>
+          <mat-form-field fxFlex="60%" appearance="outline">
+            <input matInput placeholder="Placeholder" formControlName="dateOfJoin">
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+</form>
+<div fxLayoutAlign="center center">
+  <button mat-raised-button color="primary" (click)="onSubmit()">submit</button>
+</div>
+</div>
+
+
+
+<!-- <button mat-raised-button color="primary" (click)="fromEdit?onUpdate():onSubmit()">{{fromEdit?'Update':'submit'}}</button>  -->
